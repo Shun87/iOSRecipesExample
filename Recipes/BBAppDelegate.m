@@ -14,7 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    BBRecipesListViewController *controller = (BBRecipesListViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    BBRecipesListViewController *controller = (BBRecipesListViewController *)navigationController.topViewController;
     controller.dataSource = [[BBRecipesSource alloc] init];
     return YES;
 }

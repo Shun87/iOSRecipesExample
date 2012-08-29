@@ -19,6 +19,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *prepTime;
 @property (strong, nonatomic) NSNumberFormatter *formatter;
 
-- (IBAction)dismiss:(id)sender;
-
 @end

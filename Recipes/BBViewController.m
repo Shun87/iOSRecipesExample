@@ -30,6 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.title = self.recipe.title;
     self.recipeTitle.text = self.recipe.title;
     self.directionsView.text = self.recipe.directions;
     if (nil != self.recipe.image) {
@@ -45,11 +46,6 @@
     self.directionsView = nil;
     self.recipeTitle = nil;
     self.directionsView = nil;
-}
-
-- (IBAction)dismiss:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
