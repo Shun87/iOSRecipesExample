@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.formatter = [[NSNumberFormatter alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +35,7 @@
     if (nil != self.recipe.image) {
         self.imageView.image = self.recipe.image;
     }
+    self.prepTime.text = [self.formatter stringFromNumber:self.recipe.preparationTime];
 
 }
 
@@ -44,6 +45,11 @@
     self.directionsView = nil;
     self.recipeTitle = nil;
     self.directionsView = nil;
+}
+
+- (IBAction)dismiss:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

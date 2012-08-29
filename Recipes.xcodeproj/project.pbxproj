@@ -97,6 +97,11 @@
 		5B8D226915EE441400689A71 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				5B8D228015EE443F00689A71 /* BBRecipe.h */,
+				5B8D228115EE443F00689A71 /* BBRecipe.m */,
+				5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */,
+				5B8D229915EE649C00689A71 /* BBRecipesSource.h */,
+				5B8D229A15EE649C00689A71 /* BBRecipesSource.m */,
 				5B8D227215EE441400689A71 /* BBAppDelegate.h */,
 				5B8D227315EE441400689A71 /* BBAppDelegate.m */,
 				5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */,
@@ -106,11 +111,6 @@
 				5B8D227615EE441400689A71 /* BBViewController.m */,
 				5B8D227815EE441400689A71 /* BBViewController.xib */,
 				5B8D226A15EE441400689A71 /* Supporting Files */,
-				5B8D228015EE443F00689A71 /* BBRecipe.h */,
-				5B8D228115EE443F00689A71 /* BBRecipe.m */,
-				5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */,
-				5B8D229915EE649C00689A71 /* BBRecipesSource.h */,
-				5B8D229A15EE649C00689A71 /* BBRecipesSource.m */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";

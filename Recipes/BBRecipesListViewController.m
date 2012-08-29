@@ -7,6 +7,7 @@
 //
 
 #import "BBRecipesListViewController.h"
+#import "BBViewController.h"
 
 @interface BBRecipesListViewController ()
 
@@ -114,13 +115,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    BBViewController *detailVC = [[BBViewController alloc] initWithNibName:@"BBViewController" bundle:nil];
+    detailVC.recipe = [self.dataSource recipeAtIndex:indexPath.row];
+    [self presentViewController:detailVC animated:YES completion:nil];
 }
 
 @end

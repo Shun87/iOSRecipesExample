@@ -16,5 +16,9 @@
 @property (strong, nonatomic) BBRecipe *recipe;
 @property (weak, nonatomic) IBOutlet UITextView *directionsView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *prepTime;
+@property (strong, nonatomic) NSNumberFormatter *formatter;
+
+- (IBAction)dismiss:(id)sender;
 
 @end
