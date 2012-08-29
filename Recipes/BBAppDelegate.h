@@ -14,6 +14,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) BBRecipesListViewController *viewController;
-@property (copy, nonatomic) NSArray *recipes;
 
 @end

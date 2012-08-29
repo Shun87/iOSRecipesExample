@@ -7,37 +7,10 @@
 //
 
 #import "BBAppDelegate.h"
-#import "BBRecipe.h"
+#import "BBRecipesSource.h"
 #import "BBRecipesListViewController.h"
 
 @implementation BBAppDelegate
-
-- (NSArray *)recipes
-{
-    if (nil == _recipes) {
-        NSMutableArray *recipes = [NSMutableArray array];
-        
-        for (int i = 0; i < 6; i++) {
-            BBRecipe *recipe = [[BBRecipe alloc] init];
-            recipe.directions = [NSString stringWithFormat:@"%d - Put some stuff in, and the other stuff, then stir.", i];
-            recipe.title = [NSString stringWithFormat:@"%d - One Fine Food", i];
-            recipe.image = [UIImage imageNamed:@"cookies.png"];
-            [recipes addObject:recipe];
-        }
-        
-        NSString *directions = @"Put the flour and other dry ingredients in a bowl,\
-        stir in the egs until evenly moust. Add chocolate chips and stir until event. \
-        Place tablespoon-size portions on greased cookie sheet and bake at 350∘ for \
-        6 minutes.";
-        BBRecipe *recipe = [[BBRecipe alloc] init];
-        recipe.title = @"Chocolate Chip Cookies";
-        recipe.image = [UIImage imageNamed:@"cookies.png"];
-        recipe.directions = directions;
-        [recipes addObject: recipe];
-        _recipes = [recipes copy];
-    }
-    return _recipes;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -46,7 +19,7 @@
     self.viewController = [[BBRecipesListViewController alloc] initWithNibName:@"BBRecipesListViewController" bundle:nil];
     
     self.window.rootViewController = self.viewController;
-    self.viewController.recipes = self.recipes;
+    self.viewController.dataSource = [[BBRecipesSource alloc] init];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -21,6 +21,7 @@
 		5B8D228915EE501800689A71 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228815EE501800689A71 /* cookies.png */; };
 		5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */; };
 		5B8D228E15EE55AD00689A71 /* BBRecipesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */; };
+		5B8D229B15EE649C00689A71 /* BBRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D229A15EE649C00689A71 /* BBRecipesSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesListViewController.h; sourceTree = "<group>"; };
 		5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesListViewController.m; sourceTree = "<group>"; };
 		5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBRecipesListViewController.xib; sourceTree = "<group>"; };
+		5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRecipesListDataSource.h; sourceTree = "<group>"; };
+		5B8D229915EE649C00689A71 /* BBRecipesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesSource.h; sourceTree = "<group>"; };
+		5B8D229A15EE649C00689A71 /* BBRecipesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,9 @@
 				5B8D226A15EE441400689A71 /* Supporting Files */,
 				5B8D228015EE443F00689A71 /* BBRecipe.h */,
 				5B8D228115EE443F00689A71 /* BBRecipe.m */,
+				5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */,
+				5B8D229915EE649C00689A71 /* BBRecipesSource.h */,
+				5B8D229A15EE649C00689A71 /* BBRecipesSource.m */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 				5B8D227715EE441400689A71 /* BBViewController.m in Sources */,
 				5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */,
 				5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */,
+				5B8D229B15EE649C00689A71 /* BBRecipesSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +322,7 @@
 				5B8D227F15EE441400689A71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

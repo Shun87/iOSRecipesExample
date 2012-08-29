@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBRecipesListDataSource.h"
 
 @interface BBRecipesListViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *recipes;
+@property (strong, nonatomic) id<BBRecipesListDataSource> dataSource;
 
 @end
