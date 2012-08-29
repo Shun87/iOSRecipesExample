@@ -111,13 +111,16 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([@"presentRecipeDetail" isEqualToString:segue.identifier]) {
+        NSIndexPath *index = [self.tableView indexPathForCell:sender];
+        BBRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
+        [[segue destinationViewController] setRecipe:recipe];
+    }
+}
+
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    BBViewController *detailVC = [[BBViewController alloc] initWithNibName:@"BBViewController" bundle:nil];
-    detailVC.recipe = [self.dataSource recipeAtIndex:indexPath.row];
-    [self presentViewController:detailVC animated:YES completion:nil];
-}
 
 @end

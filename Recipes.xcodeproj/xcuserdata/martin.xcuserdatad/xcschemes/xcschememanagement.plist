@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Recipes.xcscheme</key>
+		<key>StoryboardRecipes.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5B8D225E15EE441400689A71</key>
+		<key>5BC5AEA015EE83AB0021854F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

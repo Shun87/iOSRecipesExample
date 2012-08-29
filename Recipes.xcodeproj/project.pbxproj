@@ -7,130 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B8D226415EE441400689A71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8D226315EE441400689A71 /* UIKit.framework */; };
-		5B8D226615EE441400689A71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8D226515EE441400689A71 /* Foundation.framework */; };
-		5B8D226815EE441400689A71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8D226715EE441400689A71 /* CoreGraphics.framework */; };
-		5B8D226E15EE441400689A71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D226C15EE441400689A71 /* InfoPlist.strings */; };
-		5B8D227015EE441400689A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D226F15EE441400689A71 /* main.m */; };
-		5B8D227415EE441400689A71 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D227315EE441400689A71 /* BBAppDelegate.m */; };
-		5B8D227715EE441400689A71 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D227615EE441400689A71 /* BBViewController.m */; };
-		5B8D227A15EE441400689A71 /* BBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D227815EE441400689A71 /* BBViewController.xib */; };
-		5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D228115EE443F00689A71 /* BBRecipe.m */; };
-		5B8D228415EE477700689A71 /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228315EE477700689A71 /* iphoneicon.png */; };
-		5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228515EE477A00689A71 /* iphoneiconretina.png */; };
-		5B8D228915EE501800689A71 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228815EE501800689A71 /* cookies.png */; };
-		5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */; };
-		5B8D228E15EE55AD00689A71 /* BBRecipesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */; };
-		5B8D229B15EE649C00689A71 /* BBRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D229A15EE649C00689A71 /* BBRecipesSource.m */; };
+		5BC5AEA615EE83AB0021854F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA515EE83AB0021854F /* UIKit.framework */; };
+		5BC5AEA815EE83AB0021854F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA715EE83AB0021854F /* Foundation.framework */; };
+		5BC5AEAA15EE83AB0021854F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA915EE83AB0021854F /* CoreGraphics.framework */; };
+		5BC5AEE315EE88300021854F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEE115EE88300021854F /* MainStoryboard.storyboard */; };
+		5BC5AEEC15EE88CC0021854F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEEA15EE88CC0021854F /* InfoPlist.strings */; };
+		5BC5AEEE15EE89130021854F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEED15EE89130021854F /* main.m */; };
+		5BC5AEF015EE8B9C0021854F /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AED715EE87F20021854F /* BBAppDelegate.m */; };
+		5BC5AEF115EE8B9C0021854F /* BBRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AED915EE87F20021854F /* BBRecipe.m */; };
+		5BC5AEF215EE8B9C0021854F /* BBRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */; };
+		5BC5AEF315EE8B9C0021854F /* BBRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */; };
+		5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEE015EE87F20021854F /* BBViewController.m */; };
+		5BC5AEFC15EE8CB50021854F /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFB15EE8CB50021854F /* iphoneicon.png */; };
+		5BC5AEFE15EE8CB80021854F /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B8D225F15EE441400689A71 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8D226315EE441400689A71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5B8D226515EE441400689A71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5B8D226715EE441400689A71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5B8D226B15EE441400689A71 /* Recipes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Recipes-Info.plist"; sourceTree = "<group>"; };
-		5B8D226D15EE441400689A71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5B8D226F15EE441400689A71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5B8D227115EE441400689A71 /* Recipes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recipes-Prefix.pch"; sourceTree = "<group>"; };
-		5B8D227215EE441400689A71 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
-		5B8D227315EE441400689A71 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
-		5B8D227515EE441400689A71 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
-		5B8D227615EE441400689A71 /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBViewController.m; sourceTree = "<group>"; };
-		5B8D227915EE441400689A71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BBViewController.xib; sourceTree = "<group>"; };
-		5B8D228015EE443F00689A71 /* BBRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipe.h; sourceTree = "<group>"; };
-		5B8D228115EE443F00689A71 /* BBRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipe.m; sourceTree = "<group>"; };
-		5B8D228315EE477700689A71 /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
-		5B8D228515EE477A00689A71 /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
-		5B8D228815EE501800689A71 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = "<group>"; };
-		5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesListViewController.h; sourceTree = "<group>"; };
-		5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesListViewController.m; sourceTree = "<group>"; };
-		5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBRecipesListViewController.xib; sourceTree = "<group>"; };
-		5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRecipesListDataSource.h; sourceTree = "<group>"; };
-		5B8D229915EE649C00689A71 /* BBRecipesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesSource.h; sourceTree = "<group>"; };
-		5B8D229A15EE649C00689A71 /* BBRecipesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesSource.m; sourceTree = "<group>"; };
+		5BC5AEA115EE83AB0021854F /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC5AEA515EE83AB0021854F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BC5AEA715EE83AB0021854F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BC5AEA915EE83AB0021854F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BC5AED615EE87F20021854F /* BBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBAppDelegate.h; path = Recipes/BBAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		5BC5AED715EE87F20021854F /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBAppDelegate.m; path = Recipes/BBAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		5BC5AED815EE87F20021854F /* BBRecipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipe.h; path = Recipes/BBRecipe.h; sourceTree = SOURCE_ROOT; };
+		5BC5AED915EE87F20021854F /* BBRecipe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBRecipe.m; path = Recipes/BBRecipe.m; sourceTree = SOURCE_ROOT; };
+		5BC5AEDA15EE87F20021854F /* BBRecipesListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesListDataSource.h; path = Recipes/BBRecipesListDataSource.h; sourceTree = SOURCE_ROOT; };
+		5BC5AEDB15EE87F20021854F /* BBRecipesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesListViewController.h; path = Recipes/BBRecipesListViewController.h; sourceTree = SOURCE_ROOT; };
+		5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBRecipesListViewController.m; path = Recipes/BBRecipesListViewController.m; sourceTree = SOURCE_ROOT; };
+		5BC5AEDD15EE87F20021854F /* BBRecipesSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesSource.h; path = Recipes/BBRecipesSource.h; sourceTree = SOURCE_ROOT; };
+		5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBRecipesSource.m; path = Recipes/BBRecipesSource.m; sourceTree = SOURCE_ROOT; };
+		5BC5AEDF15EE87F20021854F /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBViewController.h; path = Recipes/BBViewController.h; sourceTree = SOURCE_ROOT; };
+		5BC5AEE015EE87F20021854F /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBViewController.m; path = Recipes/BBViewController.m; sourceTree = SOURCE_ROOT; };
+		5BC5AEE215EE88300021854F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Recipes/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		5BC5AEE415EE884E0021854F /* Recipes-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Recipes-Info.plist"; path = "Recipes/Recipes-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5BC5AEE615EE886E0021854F /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cookies.png; path = Recipes/cookies.png; sourceTree = SOURCE_ROOT; };
+		5BC5AEEB15EE88CC0021854F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Recipes/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		5BC5AEED15EE89130021854F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Recipes/main.m; sourceTree = SOURCE_ROOT; };
+		5BC5AEEF15EE89B40021854F /* Recipes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Recipes-Prefix.pch"; path = "Recipes/Recipes-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5BC5AEFB15EE8CB50021854F /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
+		5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B8D225C15EE441400689A71 /* Frameworks */ = {
+		5BC5AE9E15EE83AB0021854F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8D226415EE441400689A71 /* UIKit.framework in Frameworks */,
-				5B8D226615EE441400689A71 /* Foundation.framework in Frameworks */,
-				5B8D226815EE441400689A71 /* CoreGraphics.framework in Frameworks */,
+				5BC5AEA615EE83AB0021854F /* UIKit.framework in Frameworks */,
+				5BC5AEA815EE83AB0021854F /* Foundation.framework in Frameworks */,
+				5BC5AEAA15EE83AB0021854F /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B8D225415EE441400689A71 = {
+		5BC5AE9615EE83AB0021854F = {
 			isa = PBXGroup;
 			children = (
-				5B8D228515EE477A00689A71 /* iphoneiconretina.png */,
-				5B8D228315EE477700689A71 /* iphoneicon.png */,
-				5B8D226915EE441400689A71 /* Recipes */,
-				5B8D226215EE441400689A71 /* Frameworks */,
-				5B8D226015EE441400689A71 /* Products */,
+				5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */,
+				5BC5AEFB15EE8CB50021854F /* iphoneicon.png */,
+				5BC5AEAB15EE83AB0021854F /* Recipes */,
+				5BC5AEA415EE83AB0021854F /* Frameworks */,
+				5BC5AEA215EE83AB0021854F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B8D226015EE441400689A71 /* Products */ = {
+		5BC5AEA215EE83AB0021854F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B8D225F15EE441400689A71 /* Recipes.app */,
+				5BC5AEA115EE83AB0021854F /* Recipes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B8D226215EE441400689A71 /* Frameworks */ = {
+		5BC5AEA415EE83AB0021854F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B8D226315EE441400689A71 /* UIKit.framework */,
-				5B8D226515EE441400689A71 /* Foundation.framework */,
-				5B8D226715EE441400689A71 /* CoreGraphics.framework */,
+				5BC5AEA515EE83AB0021854F /* UIKit.framework */,
+				5BC5AEA715EE83AB0021854F /* Foundation.framework */,
+				5BC5AEA915EE83AB0021854F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5B8D226915EE441400689A71 /* Recipes */ = {
+		5BC5AEAB15EE83AB0021854F /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				5B8D228015EE443F00689A71 /* BBRecipe.h */,
-				5B8D228115EE443F00689A71 /* BBRecipe.m */,
-				5B8D229715EE631900689A71 /* BBRecipesListDataSource.h */,
-				5B8D229915EE649C00689A71 /* BBRecipesSource.h */,
-				5B8D229A15EE649C00689A71 /* BBRecipesSource.m */,
-				5B8D227215EE441400689A71 /* BBAppDelegate.h */,
-				5B8D227315EE441400689A71 /* BBAppDelegate.m */,
-				5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */,
-				5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */,
-				5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */,
-				5B8D227515EE441400689A71 /* BBViewController.h */,
-				5B8D227615EE441400689A71 /* BBViewController.m */,
-				5B8D227815EE441400689A71 /* BBViewController.xib */,
-				5B8D226A15EE441400689A71 /* Supporting Files */,
+				5BC5AEE115EE88300021854F /* MainStoryboard.storyboard */,
+				5BC5AED615EE87F20021854F /* BBAppDelegate.h */,
+				5BC5AED715EE87F20021854F /* BBAppDelegate.m */,
+				5BC5AED815EE87F20021854F /* BBRecipe.h */,
+				5BC5AED915EE87F20021854F /* BBRecipe.m */,
+				5BC5AEDA15EE87F20021854F /* BBRecipesListDataSource.h */,
+				5BC5AEDB15EE87F20021854F /* BBRecipesListViewController.h */,
+				5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */,
+				5BC5AEDD15EE87F20021854F /* BBRecipesSource.h */,
+				5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */,
+				5BC5AEDF15EE87F20021854F /* BBViewController.h */,
+				5BC5AEE015EE87F20021854F /* BBViewController.m */,
+				5BC5AEAC15EE83AB0021854F /* Supporting Files */,
 			);
-			path = Recipes;
+			name = Recipes;
+			path = StoryboardRecipes;
 			sourceTree = "<group>";
 		};
-		5B8D226A15EE441400689A71 /* Supporting Files */ = {
+		5BC5AEAC15EE83AB0021854F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B8D228715EE500500689A71 /* Images */,
-				5B8D226B15EE441400689A71 /* Recipes-Info.plist */,
-				5B8D226C15EE441400689A71 /* InfoPlist.strings */,
-				5B8D226F15EE441400689A71 /* main.m */,
-				5B8D227115EE441400689A71 /* Recipes-Prefix.pch */,
+				5BC5AEEF15EE89B40021854F /* Recipes-Prefix.pch */,
+				5BC5AEED15EE89130021854F /* main.m */,
+				5BC5AEEA15EE88CC0021854F /* InfoPlist.strings */,
+				5BC5AEE415EE884E0021854F /* Recipes-Info.plist */,
+				5BC5AED115EE83DB0021854F /* Images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5B8D228715EE500500689A71 /* Images */ = {
+		5BC5AED115EE83DB0021854F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5B8D228815EE501800689A71 /* cookies.png */,
+				5BC5AEE615EE886E0021854F /* cookies.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -138,103 +135,101 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B8D225E15EE441400689A71 /* Recipes */ = {
+		5BC5AEA015EE83AB0021854F /* Recipes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B8D227D15EE441400689A71 /* Build configuration list for PBXNativeTarget "Recipes" */;
+			buildConfigurationList = 5BC5AEBF15EE83AB0021854F /* Build configuration list for PBXNativeTarget "Recipes" */;
 			buildPhases = (
-				5B8D225B15EE441400689A71 /* Sources */,
-				5B8D225C15EE441400689A71 /* Frameworks */,
-				5B8D225D15EE441400689A71 /* Resources */,
+				5BC5AE9D15EE83AB0021854F /* Sources */,
+				5BC5AE9E15EE83AB0021854F /* Frameworks */,
+				5BC5AE9F15EE83AB0021854F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Recipes;
-			productName = Recipes;
-			productReference = 5B8D225F15EE441400689A71 /* Recipes.app */;
+			productName = StoryboardRecipes;
+			productReference = 5BC5AEA115EE83AB0021854F /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B8D225615EE441400689A71 /* Project object */ = {
+		5BC5AE9815EE83AB0021854F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BB;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Bill Bear";
 			};
-			buildConfigurationList = 5B8D225915EE441400689A71 /* Build configuration list for PBXProject "Recipes" */;
+			buildConfigurationList = 5BC5AE9B15EE83AB0021854F /* Build configuration list for PBXProject "Recipes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5B8D225415EE441400689A71;
-			productRefGroup = 5B8D226015EE441400689A71 /* Products */;
+			mainGroup = 5BC5AE9615EE83AB0021854F;
+			productRefGroup = 5BC5AEA215EE83AB0021854F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B8D225E15EE441400689A71 /* Recipes */,
+				5BC5AEA015EE83AB0021854F /* Recipes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B8D225D15EE441400689A71 /* Resources */ = {
+		5BC5AE9F15EE83AB0021854F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8D226E15EE441400689A71 /* InfoPlist.strings in Resources */,
-				5B8D227A15EE441400689A71 /* BBViewController.xib in Resources */,
-				5B8D228415EE477700689A71 /* iphoneicon.png in Resources */,
-				5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */,
-				5B8D228915EE501800689A71 /* cookies.png in Resources */,
-				5B8D228E15EE55AD00689A71 /* BBRecipesListViewController.xib in Resources */,
+				5BC5AEE315EE88300021854F /* MainStoryboard.storyboard in Resources */,
+				5BC5AEEC15EE88CC0021854F /* InfoPlist.strings in Resources */,
+				5BC5AEFC15EE8CB50021854F /* iphoneicon.png in Resources */,
+				5BC5AEFE15EE8CB80021854F /* iphoneiconretina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B8D225B15EE441400689A71 /* Sources */ = {
+		5BC5AE9D15EE83AB0021854F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8D227015EE441400689A71 /* main.m in Sources */,
-				5B8D227415EE441400689A71 /* BBAppDelegate.m in Sources */,
-				5B8D227715EE441400689A71 /* BBViewController.m in Sources */,
-				5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */,
-				5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */,
-				5B8D229B15EE649C00689A71 /* BBRecipesSource.m in Sources */,
+				5BC5AEF015EE8B9C0021854F /* BBAppDelegate.m in Sources */,
+				5BC5AEF115EE8B9C0021854F /* BBRecipe.m in Sources */,
+				5BC5AEF215EE8B9C0021854F /* BBRecipesListViewController.m in Sources */,
+				5BC5AEF315EE8B9C0021854F /* BBRecipesSource.m in Sources */,
+				5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */,
+				5BC5AEEE15EE89130021854F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B8D226C15EE441400689A71 /* InfoPlist.strings */ = {
+		5BC5AEE115EE88300021854F /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5B8D226D15EE441400689A71 /* en */,
+				5BC5AEE215EE88300021854F /* en */,
 			);
-			name = InfoPlist.strings;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
-		5B8D227815EE441400689A71 /* BBViewController.xib */ = {
+		5BC5AEEA15EE88CC0021854F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5B8D227915EE441400689A71 /* en */,
+				5BC5AEEB15EE88CC0021854F /* en */,
 			);
-			name = BBViewController.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5B8D227B15EE441400689A71 /* Debug */ = {
+		5BC5AEBD15EE83AB0021854F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +255,7 @@
 			};
 			name = Debug;
 		};
-		5B8D227C15EE441400689A71 /* Release */ = {
+		5BC5AEBE15EE83AB0021854F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,24 +276,24 @@
 			};
 			name = Release;
 		};
-		5B8D227E15EE441400689A71 /* Debug */ = {
+		5BC5AEC015EE83AB0021854F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recipes;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		5B8D227F15EE441400689A71 /* Release */ = {
+		5BC5AEC115EE83AB0021854F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recipes;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -306,25 +301,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B8D225915EE441400689A71 /* Build configuration list for PBXProject "Recipes" */ = {
+		5BC5AE9B15EE83AB0021854F /* Build configuration list for PBXProject "Recipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B8D227B15EE441400689A71 /* Debug */,
-				5B8D227C15EE441400689A71 /* Release */,
+				5BC5AEBD15EE83AB0021854F /* Debug */,
+				5BC5AEBE15EE83AB0021854F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B8D227D15EE441400689A71 /* Build configuration list for PBXNativeTarget "Recipes" */ = {
+		5BC5AEBF15EE83AB0021854F /* Build configuration list for PBXNativeTarget "Recipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B8D227E15EE441400689A71 /* Debug */,
-				5B8D227F15EE441400689A71 /* Release */,
+				5BC5AEC015EE83AB0021854F /* Debug */,
+				5BC5AEC115EE83AB0021854F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B8D225615EE441400689A71 /* Project object */;
+	rootObject = 5BC5AE9815EE83AB0021854F /* Project object */;
 }

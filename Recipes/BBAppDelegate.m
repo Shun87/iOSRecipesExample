@@ -1,30 +1,24 @@
 //
 //  BBAppDelegate.m
-//  Recipes
+//  StoryboardRecipes
 //
 //  Created by Martin Volerich on 8/29/12.
 //  Copyright (c) 2012 Bill Bear. All rights reserved.
 //
 
 #import "BBAppDelegate.h"
-#import "BBRecipesSource.h"
 #import "BBRecipesListViewController.h"
+#import "BBRecipesSource.h"
 
 @implementation BBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[BBRecipesListViewController alloc] initWithNibName:@"BBRecipesListViewController" bundle:nil];
-    
-    self.window.rootViewController = self.viewController;
-    self.viewController.dataSource = [[BBRecipesSource alloc] init];
-    
-    [self.window makeKeyAndVisible];
+    BBRecipesListViewController *controller = (BBRecipesListViewController *)self.window.rootViewController;
+    controller.dataSource = [[BBRecipesSource alloc] init];
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

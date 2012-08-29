@@ -14,9 +14,12 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string></string>
 				<string>iphoneicon.png</string>
 				<string>iphoneiconretina.png</string>
 			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -35,6 +38,8 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIMainStoryboardFile</key>
+	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
