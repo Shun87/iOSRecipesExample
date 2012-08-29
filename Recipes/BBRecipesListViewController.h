@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) id<BBRecipesListDataSource> dataSource;
 
+- (void)finishedEditingRecipe:(BBRecipe *)recipe;
+
 @end

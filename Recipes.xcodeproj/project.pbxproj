@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5BBA470415EE926C00A22D84 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BBA470315EE926C00A22D84 /* cookies.png */; };
+		5BBA470715EE93E900A22D84 /* BBRecipeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */; };
+		5BBA470A15EE9BCB00A22D84 /* BBDirectionsEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */; };
+		5BBA470C15EEA0C100A22D84 /* TapToChoose.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BBA470B15EEA0C100A22D84 /* TapToChoose.png */; };
 		5BC5AEA615EE83AB0021854F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA515EE83AB0021854F /* UIKit.framework */; };
 		5BC5AEA815EE83AB0021854F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA715EE83AB0021854F /* Foundation.framework */; };
 		5BC5AEAA15EE83AB0021854F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC5AEA915EE83AB0021854F /* CoreGraphics.framework */; };
@@ -25,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		5BBA470315EE926C00A22D84 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = SOURCE_ROOT; };
+		5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipeEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		5BBA470815EE9BCB00A22D84 /* BBDirectionsEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDirectionsEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDirectionsEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		5BBA470B15EEA0C100A22D84 /* TapToChoose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapToChoose.png; sourceTree = SOURCE_ROOT; };
 		5BC5AEA115EE83AB0021854F /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC5AEA515EE83AB0021854F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BC5AEA715EE83AB0021854F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,7 +115,11 @@
 				5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */,
 				5BC5AEDF15EE87F20021854F /* BBViewController.h */,
 				5BC5AEE015EE87F20021854F /* BBViewController.m */,
+				5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */,
+				5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */,
 				5BC5AEAC15EE83AB0021854F /* Supporting Files */,
+				5BBA470815EE9BCB00A22D84 /* BBDirectionsEditorViewController.h */,
+				5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */,
 			);
 			name = Recipes;
 			path = StoryboardRecipes;
@@ -128,6 +140,7 @@
 		5BC5AED115EE83DB0021854F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5BBA470B15EEA0C100A22D84 /* TapToChoose.png */,
 				5BBA470315EE926C00A22D84 /* cookies.png */,
 			);
 			name = Images;
@@ -190,6 +203,7 @@
 				5BC5AEFC15EE8CB50021854F /* iphoneicon.png in Resources */,
 				5BC5AEFE15EE8CB80021854F /* iphoneiconretina.png in Resources */,
 				5BBA470415EE926C00A22D84 /* cookies.png in Resources */,
+				5BBA470C15EEA0C100A22D84 /* TapToChoose.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +220,8 @@
 				5BC5AEF315EE8B9C0021854F /* BBRecipesSource.m in Sources */,
 				5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */,
 				5BC5AEEE15EE89130021854F /* main.m in Sources */,
+				5BBA470715EE93E900A22D84 /* BBRecipeEditorViewController.m in Sources */,
+				5BBA470A15EE9BCB00A22D84 /* BBDirectionsEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

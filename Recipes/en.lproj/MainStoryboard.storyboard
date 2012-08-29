@@ -47,7 +47,13 @@
                             <outlet property="delegate" destination="2" id="uaZ-o7-p2e"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipes" id="sQF-yM-jOG"/>
+                    <navigationItem key="navigationItem" title="Recipes" id="sQF-yM-jOG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mAc-gO-LFw">
+                            <connections>
+                                <segue destination="rcA-hN-ddP" kind="modal" identifier="addNewRecipe" id="996-JT-ZIW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +117,164 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrA-cy-9Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365" y="-8"/>
+            <point key="canvasLocation" x="-247" y="-14"/>
+        </scene>
+        <!--Recipe Editor View Controller - Edit Recipe-->
+        <scene sceneID="RFO-j6-phO">
+            <objects>
+                <viewController id="B7u-Cd-nJF" customClass="BBRecipeEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0l5-gV-T6H">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="" id="UOb-Lj-o6g">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="BR9-Nh-xn1"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="H5r-G2-gCz" appends="YES" id="7sx-qr-v7n"/>
+                                </connections>
+                            </textView>
+                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Prep Time:" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="JtK-5u-dWQ">
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            </label>
+                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Label" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="Xps-cb-P8x">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Ffa-PB-1hm"/>
+                                </constraints>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <imageView translatesAutoresizingMaskIntoConstraints="NO" contentMode="scaleToFill" image="TapToChoose.png" id="acM-bZ-8Li">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1VM-wL-x7e" appends="YES" id="Xum-Kn-vWD"/>
+                                </connections>
+                            </imageView>
+                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Title" minimumFontSize="17" clearButtonMode="whileEditing" text="" id="f6V-2g-lCz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="4Pe-Zw-qIK"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <connections>
+                                    <outlet property="delegate" destination="B7u-Cd-nJF" id="bG4-vV-vz4"/>
+                                </connections>
+                            </textField>
+                            <stepper translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="skb-cO-JPt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="ybc-Wu-6Sc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changePreparationTime:" destination="B7u-Cd-nJF" eventType="valueChanged" id="XBe-v1-zaj"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UOb-Lj-o6g" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="17l-tA-2Gz"/>
+                            <constraint firstItem="JtK-5u-dWQ" firstAttribute="top" secondItem="UOb-Lj-o6g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2OF-YX-61l"/>
+                            <constraint firstAttribute="trailing" secondItem="skb-cO-JPt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Uf-50-wAB"/>
+                            <constraint firstItem="f6V-2g-lCz" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="19" id="9l0-i6-26B"/>
+                            <constraint firstItem="skb-cO-JPt" firstAttribute="leading" secondItem="Xps-cb-P8x" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9q7-sj-L6Z"/>
+                            <constraint firstItem="f6V-2g-lCz" firstAttribute="top" secondItem="0l5-gV-T6H" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CJE-1s-LZm"/>
+                            <constraint firstItem="JtK-5u-dWQ" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CQU-06-7Ni"/>
+                            <constraint firstItem="acM-bZ-8Li" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QAn-mb-We2"/>
+                            <constraint firstItem="acM-bZ-8Li" firstAttribute="top" secondItem="skb-cO-JPt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TMs-Be-hDe"/>
+                            <constraint firstItem="Xps-cb-P8x" firstAttribute="baseline" secondItem="JtK-5u-dWQ" secondAttribute="baseline" type="default" id="cxX-y6-Wb2"/>
+                            <constraint firstItem="skb-cO-JPt" firstAttribute="centerY" secondItem="Xps-cb-P8x" secondAttribute="centerY" type="default" id="f1e-4D-INW"/>
+                            <constraint firstAttribute="trailing" secondItem="UOb-Lj-o6g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jC8-dA-HbK"/>
+                            <constraint firstItem="UOb-Lj-o6g" firstAttribute="top" secondItem="f6V-2g-lCz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qEP-Cv-alc"/>
+                            <constraint firstItem="Xps-cb-P8x" firstAttribute="leading" secondItem="JtK-5u-dWQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sAX-h6-w1P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Recipe" id="y1j-wp-bmq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kKJ-7t-l1U">
+                            <connections>
+                                <action selector="done:" destination="B7u-Cd-nJF" id="aOV-Kn-KoX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="directionsText" destination="UOb-Lj-o6g" id="31X-jU-BWv"/>
+                        <outlet property="prepTimeLabel" destination="Xps-cb-P8x" id="yiT-zq-URk"/>
+                        <outlet property="prepTimeStepper" destination="skb-cO-JPt" id="X6K-OD-ecx"/>
+                        <outlet property="recipeImage" destination="acM-bZ-8Li" id="U1c-f3-jYr"/>
+                        <outlet property="titleField" destination="f6V-2g-lCz" id="PRK-fW-B8Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wM-FD-4HO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="H5r-G2-gCz" userLabel="Directions Gesture Recognizer">
+                    <connections>
+                        <segue destination="Qg7-Ma-xEh" kind="push" identifier="editDirections" id="Zer-Mh-1ZJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1VM-wL-x7e" userLabel="Image Gesture Recognizer">
+                    <connections>
+                        <segue destination="D7j-Cu-c4n" kind="modal" identifier="choosePhoto" id="eD7-Qx-AeU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="187" y="554"/>
+        </scene>
+        <!--Image Picker Controller-->
+        <scene sceneID="EaC-QU-zNW">
+            <objects>
+                <viewController id="D7j-Cu-c4n" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1I-Zc-w0f">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nk3-Jb-cga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="-8"/>
+        </scene>
+        <!--Directions Editor View Controller-->
+        <scene sceneID="TlT-Pe-Lsa">
+            <objects>
+                <viewController id="Qg7-Ma-xEh" customClass="BBDirectionsEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8cN-m1-ZQ7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="scH-MH-niN">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="haB-eE-KpV"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Qg7-Ma-xEh" id="2rZ-It-0Qf"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="scH-MH-niN" firstAttribute="leading" secondItem="8cN-m1-ZQ7" secondAttribute="leading" type="default" id="DSM-ve-C0r"/>
+                            <constraint firstItem="scH-MH-niN" firstAttribute="trailing" secondItem="8cN-m1-ZQ7" secondAttribute="trailing" type="default" id="OC5-lb-YS6"/>
+                            <constraint firstItem="scH-MH-niN" firstAttribute="top" secondItem="8cN-m1-ZQ7" secondAttribute="top" constant="1" id="aFk-TQ-zPU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6SQ-Mi-COG"/>
+                    <connections>
+                        <outlet property="textView" destination="scH-MH-niN" id="477-p9-cRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEq-U3-7ln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVf-6l-KGW">
@@ -131,27 +294,29 @@
             </objects>
             <point key="canvasLocation" x="-1195" y="-8"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cCL-7M-0Gt">
+            <objects>
+                <navigationController id="rcA-hN-ddP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAe-EQ-EIi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B7u-Cd-nJF" kind="relationship" relationship="rootViewController" id="WUq-x1-P35"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AsD-em-zYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="554"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="TapToChoose.png" width="280" height="280"/>
         <image name="cookies.png" width="280" height="280"/>
     </resources>
-    <classes>
-        <class className="BBRecipesListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBRecipesListViewController.h"/>
-        </class>
-        <class className="BBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="directionsView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="prepTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recipeTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

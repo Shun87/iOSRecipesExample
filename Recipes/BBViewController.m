@@ -40,12 +40,5 @@
 
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    self.directionsView = nil;
-    self.recipeTitle = nil;
-    self.directionsView = nil;
-}
 
 @end

@@ -14,5 +14,7 @@
 - (NSInteger)recipeCount;
 - (BBRecipe *)recipeAtIndex:(NSInteger)index;
 - (void)deleteRecipeAtIndex:(NSInteger)index;
+- (BBRecipe *)createNewRecipe;
+- (NSUInteger)indexOfRecipe:(BBRecipe *)recipe;
 
 @end

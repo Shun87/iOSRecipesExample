@@ -11,6 +11,4 @@
 
 @interface BBRecipesSource : NSObject <BBRecipesListDataSource>
 
-
-
 @end

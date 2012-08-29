@@ -29,6 +29,18 @@
     [self.recipes removeObjectAtIndex:index];
 }
 
+- (BBRecipe *)createNewRecipe
+{
+    BBRecipe *recipe = [[BBRecipe alloc] init];
+    [self.recipes addObject:recipe];
+    return recipe;
+}
+
+- (NSUInteger)indexOfRecipe:(BBRecipe *)recipe
+{
+    return [self.recipes indexOfObject:recipe];
+}
+
 - (NSArray *)recipes
 {
     if (nil == _recipes) {

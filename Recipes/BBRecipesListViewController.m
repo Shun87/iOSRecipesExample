@@ -8,6 +8,7 @@
 
 #import "BBRecipesListViewController.h"
 #import "BBViewController.h"
+#import "BBRecipeEditorViewController.h"
 
 @interface BBRecipesListViewController ()
 
@@ -113,6 +114,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([@"addNewRecipe" isEqualToString:segue.identifier]) {
+        BBRecipe *recipe = [self.dataSource createNewRecipe];
+        UIViewController *topVC = [[segue destinationViewController] topViewController];
+        BBRecipeEditorViewController *editor = (BBRecipeEditorViewController *)topVC;
+        editor.recipeListVC = self;
+        editor.recipe = recipe;
+    }
     if ([@"presentRecipeDetail" isEqualToString:segue.identifier]) {
         NSIndexPath *index = [self.tableView indexPathForCell:sender];
         BBRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
@@ -120,7 +128,12 @@
     }
 }
 
-#pragma mark - Table view delegate
 
+- (void)finishedEditingRecipe:(BBRecipe *)recipe
+{
+    NSUInteger row = [self.dataSource indexOfRecipe:recipe];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
+}
 
 @end
