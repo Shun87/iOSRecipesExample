@@ -15,6 +15,10 @@
 		5B8D227415EE441400689A71 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D227315EE441400689A71 /* BBAppDelegate.m */; };
 		5B8D227715EE441400689A71 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D227615EE441400689A71 /* BBViewController.m */; };
 		5B8D227A15EE441400689A71 /* BBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D227815EE441400689A71 /* BBViewController.xib */; };
+		5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D228115EE443F00689A71 /* BBRecipe.m */; };
+		5B8D228415EE477700689A71 /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228315EE477700689A71 /* iphoneicon.png */; };
+		5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228515EE477A00689A71 /* iphoneiconretina.png */; };
+		5B8D228915EE501800689A71 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228815EE501800689A71 /* cookies.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,11 @@
 		5B8D227515EE441400689A71 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
 		5B8D227615EE441400689A71 /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBViewController.m; sourceTree = "<group>"; };
 		5B8D227915EE441400689A71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BBViewController.xib; sourceTree = "<group>"; };
+		5B8D228015EE443F00689A71 /* BBRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipe.h; sourceTree = "<group>"; };
+		5B8D228115EE443F00689A71 /* BBRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipe.m; sourceTree = "<group>"; };
+		5B8D228315EE477700689A71 /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
+		5B8D228515EE477A00689A71 /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
+		5B8D228815EE501800689A71 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,8 @@
 		5B8D225415EE441400689A71 = {
 			isa = PBXGroup;
 			children = (
+				5B8D228515EE477A00689A71 /* iphoneiconretina.png */,
+				5B8D228315EE477700689A71 /* iphoneicon.png */,
 				5B8D226915EE441400689A71 /* Recipes */,
 				5B8D226215EE441400689A71 /* Frameworks */,
 				5B8D226015EE441400689A71 /* Products */,
@@ -83,6 +94,8 @@
 				5B8D227615EE441400689A71 /* BBViewController.m */,
 				5B8D227815EE441400689A71 /* BBViewController.xib */,
 				5B8D226A15EE441400689A71 /* Supporting Files */,
+				5B8D228015EE443F00689A71 /* BBRecipe.h */,
+				5B8D228115EE443F00689A71 /* BBRecipe.m */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -90,12 +103,21 @@
 		5B8D226A15EE441400689A71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B8D228715EE500500689A71 /* Images */,
 				5B8D226B15EE441400689A71 /* Recipes-Info.plist */,
 				5B8D226C15EE441400689A71 /* InfoPlist.strings */,
 				5B8D226F15EE441400689A71 /* main.m */,
 				5B8D227115EE441400689A71 /* Recipes-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B8D228715EE500500689A71 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D228815EE501800689A71 /* cookies.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +174,9 @@
 			files = (
 				5B8D226E15EE441400689A71 /* InfoPlist.strings in Resources */,
 				5B8D227A15EE441400689A71 /* BBViewController.xib in Resources */,
+				5B8D228415EE477700689A71 /* iphoneicon.png in Resources */,
+				5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */,
+				5B8D228915EE501800689A71 /* cookies.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +190,7 @@
 				5B8D227015EE441400689A71 /* main.m in Sources */,
 				5B8D227415EE441400689A71 /* BBAppDelegate.m in Sources */,
 				5B8D227715EE441400689A71 /* BBViewController.m in Sources */,
+				5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

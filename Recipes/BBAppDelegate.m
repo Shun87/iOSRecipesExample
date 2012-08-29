@@ -14,9 +14,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    NSString *directions = @"Put the flour and other dry ingredients in a bowl,\
+    stir in the egs until evenly moust. Add chocolate chips and stir until event. \
+    Place tablespoon-size portions on greased cookie sheet and bake at 350∘ for \
+    6 minutes.";
+    
+    BBRecipe *recipe = [[BBRecipe alloc] init];
+    recipe.title = @"Chocolate Chip Cookies";
+    recipe.image = [UIImage imageNamed:@"cookies.png"];
+    recipe.directions = directions;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[BBViewController alloc] initWithNibName:@"BBViewController" bundle:nil];
+    
+    self.viewController.recipe = recipe;
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

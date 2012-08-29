@@ -26,4 +26,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.recipeTitle.text = self.recipe.title;
+    self.directionsView.text = self.recipe.directions;
+    if (nil != self.recipe.image) {
+        self.imageView.image = self.recipe.image;
+    }
+
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    self.directionsView = nil;
+    self.recipeTitle = nil;
+    self.directionsView = nil;
+}
+
 @end

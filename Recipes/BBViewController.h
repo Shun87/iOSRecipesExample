@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBRecipe.h"
 
 @interface BBViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *recipeTitle;
+@property (strong, nonatomic) BBRecipe *recipe;
+@property (weak, nonatomic) IBOutlet UITextView *directionsView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
