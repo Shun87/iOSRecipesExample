@@ -7,6 +7,7 @@
 //
 
 #import "BBViewController.h"
+#import "BBRecipe.h"
 
 @interface BBViewController ()
 

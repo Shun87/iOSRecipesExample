@@ -19,6 +19,8 @@
 		5B8D228415EE477700689A71 /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228315EE477700689A71 /* iphoneicon.png */; };
 		5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228515EE477A00689A71 /* iphoneiconretina.png */; };
 		5B8D228915EE501800689A71 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228815EE501800689A71 /* cookies.png */; };
+		5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */; };
+		5B8D228E15EE55AD00689A71 /* BBRecipesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		5B8D228315EE477700689A71 /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
 		5B8D228515EE477A00689A71 /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
 		5B8D228815EE501800689A71 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = "<group>"; };
+		5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesListViewController.h; sourceTree = "<group>"; };
+		5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesListViewController.m; sourceTree = "<group>"; };
+		5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBRecipesListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,9 @@
 			children = (
 				5B8D227215EE441400689A71 /* BBAppDelegate.h */,
 				5B8D227315EE441400689A71 /* BBAppDelegate.m */,
+				5B8D228A15EE55AD00689A71 /* BBRecipesListViewController.h */,
+				5B8D228B15EE55AD00689A71 /* BBRecipesListViewController.m */,
+				5B8D228C15EE55AD00689A71 /* BBRecipesListViewController.xib */,
 				5B8D227515EE441400689A71 /* BBViewController.h */,
 				5B8D227615EE441400689A71 /* BBViewController.m */,
 				5B8D227815EE441400689A71 /* BBViewController.xib */,
@@ -177,6 +185,7 @@
 				5B8D228415EE477700689A71 /* iphoneicon.png in Resources */,
 				5B8D228615EE477A00689A71 /* iphoneiconretina.png in Resources */,
 				5B8D228915EE501800689A71 /* cookies.png in Resources */,
+				5B8D228E15EE55AD00689A71 /* BBRecipesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +200,7 @@
 				5B8D227415EE441400689A71 /* BBAppDelegate.m in Sources */,
 				5B8D227715EE441400689A71 /* BBViewController.m in Sources */,
 				5B8D228215EE443F00689A71 /* BBRecipe.m in Sources */,
+				5B8D228D15EE55AD00689A71 /* BBRecipesListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

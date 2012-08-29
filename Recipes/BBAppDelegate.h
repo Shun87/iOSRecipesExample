@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class BBViewController;
+@class BBRecipesListViewController;
 
 @interface BBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) BBViewController *viewController;
+@property (strong, nonatomic) BBRecipesListViewController *viewController;
+@property (copy, nonatomic) NSArray *recipes;
 
 @end

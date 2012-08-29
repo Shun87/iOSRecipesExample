@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BBRecipe.h"
+
+@class BBRecipe;
 
 @interface BBViewController : UIViewController
 
