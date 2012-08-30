@@ -13,11 +13,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kQC-kQ-5Qd" detailTextLabel="Hns-w1-w5Y" imageView="9i7-4K-LrH" style="IBUITableViewCellStyleSubtitle" id="Qac-Fu-nja">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kQC-kQ-5Qd" detailTextLabel="Hns-w1-w5Y" imageView="9i7-4K-LrH" style="IBUITableViewCellStyleSubtitle" id="Qac-Fu-nja">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Title" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="kQC-kQ-5Qd">
@@ -54,6 +54,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rcA-hN-ddP" kind="modal" identifier="editExistingRecipe" id="n26-Xx-E8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,13 +143,16 @@
                                 </connections>
                             </textView>
                             <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Prep Time:" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="JtK-5u-dWQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Er9-kf-SaC"/>
+                                </constraints>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             </label>
                             <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Label" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="Xps-cb-P8x">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Ffa-PB-1hm"/>
+                                    <constraint firstAttribute="width" constant="80" id="00A-qB-hjQ"/>
                                 </constraints>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -170,9 +176,6 @@
                                 </connections>
                             </textField>
                             <stepper translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="skb-cO-JPt">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="ybc-Wu-6Sc"/>
-                                </constraints>
                                 <connections>
                                     <action selector="changePreparationTime:" destination="B7u-Cd-nJF" eventType="valueChanged" id="XBe-v1-zaj"/>
                                 </connections>
@@ -184,16 +187,15 @@
                             <constraint firstItem="JtK-5u-dWQ" firstAttribute="top" secondItem="UOb-Lj-o6g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2OF-YX-61l"/>
                             <constraint firstAttribute="trailing" secondItem="skb-cO-JPt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Uf-50-wAB"/>
                             <constraint firstItem="f6V-2g-lCz" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="19" id="9l0-i6-26B"/>
-                            <constraint firstItem="skb-cO-JPt" firstAttribute="leading" secondItem="Xps-cb-P8x" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9q7-sj-L6Z"/>
                             <constraint firstItem="f6V-2g-lCz" firstAttribute="top" secondItem="0l5-gV-T6H" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CJE-1s-LZm"/>
                             <constraint firstItem="JtK-5u-dWQ" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CQU-06-7Ni"/>
                             <constraint firstItem="acM-bZ-8Li" firstAttribute="leading" secondItem="0l5-gV-T6H" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QAn-mb-We2"/>
-                            <constraint firstItem="acM-bZ-8Li" firstAttribute="top" secondItem="skb-cO-JPt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TMs-Be-hDe"/>
                             <constraint firstItem="Xps-cb-P8x" firstAttribute="baseline" secondItem="JtK-5u-dWQ" secondAttribute="baseline" type="default" id="cxX-y6-Wb2"/>
-                            <constraint firstItem="skb-cO-JPt" firstAttribute="centerY" secondItem="Xps-cb-P8x" secondAttribute="centerY" type="default" id="f1e-4D-INW"/>
                             <constraint firstAttribute="trailing" secondItem="UOb-Lj-o6g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jC8-dA-HbK"/>
                             <constraint firstItem="UOb-Lj-o6g" firstAttribute="top" secondItem="f6V-2g-lCz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qEP-Cv-alc"/>
-                            <constraint firstItem="Xps-cb-P8x" firstAttribute="leading" secondItem="JtK-5u-dWQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sAX-h6-w1P"/>
+                            <constraint firstItem="Xps-cb-P8x" firstAttribute="centerY" secondItem="skb-cO-JPt" secondAttribute="centerY" priority="425" type="user" id="s6q-Tf-txC"/>
+                            <constraint firstItem="acM-bZ-8Li" firstAttribute="top" secondItem="skb-cO-JPt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wPl-Rd-hck"/>
+                            <constraint firstItem="skb-cO-JPt" firstAttribute="leading" secondItem="Xps-cb-P8x" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xj4-5w-Ebc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Recipe" id="y1j-wp-bmq">
@@ -317,9 +319,47 @@
         <image name="TapToChoose.png" width="280" height="280"/>
         <image name="cookies.png" width="280" height="280"/>
     </resources>
+    <classes>
+        <class className="BBDirectionsEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBDirectionsEditorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BBRecipeEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBRecipeEditorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePreparationTime:" candidateClass="UIStepper"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="directionsText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="prepTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="prepTimeStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="recipeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="BBRecipesListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBRecipesListViewController.h"/>
+        </class>
+        <class className="BBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="directionsView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="prepTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recipeTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="n26-Xx-E8l"/>
+    </inferredMetricsTieBreakers>
 </document>

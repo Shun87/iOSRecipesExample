@@ -96,6 +96,12 @@
     }   
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"editExistingRecipe" sender:cell];
+}
+
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
@@ -126,6 +132,14 @@
         BBRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
         [[segue destinationViewController] setRecipe:recipe];
     }
+    if ([@"editExistingRecipe" isEqualToString:segue.identifier]) {
+        NSIndexPath *index = [self.tableView indexPathForCell:sender];
+        BBRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
+        UINavigationController *nav = [segue destinationViewController];
+        BBRecipeEditorViewController *editor = (BBRecipeEditorViewController *)nav.topViewController;
+        editor.recipeListVC = self;
+        editor.recipe = recipe;
+    }
 }
 
 
@@ -133,7 +147,12 @@
 {
     NSUInteger row = [self.dataSource indexOfRecipe:recipe];
     NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+    if (nil == cell) {
+        [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
+    } else {
+        [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
