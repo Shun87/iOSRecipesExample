@@ -58,6 +58,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     self.recipe.directions = textView.text;
+    [self.delegate recipeChanged:self.recipe];
 }
 
 @end

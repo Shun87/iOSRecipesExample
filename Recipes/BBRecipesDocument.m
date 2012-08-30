@@ -42,6 +42,11 @@
     return recipe;
 }
 
+- (void)recipesChanged
+{
+    [self updateChangeCount:UIDocumentChangeDone];
+}
+
 #pragma mark - UIDocument overrides
 
 - (id)initWithFileURL:(NSURL *)url

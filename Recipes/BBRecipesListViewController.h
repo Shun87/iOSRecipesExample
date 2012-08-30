@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BBRecipesListDataSource.h"
+#import "BBRecipeEditorDelegate.h"
 
-@interface BBRecipesListViewController : UITableViewController
+@interface BBRecipesListViewController : UITableViewController <BBRecipeEditorDelegate>
 
 @property (strong, nonatomic) id<BBRecipesListDataSource> dataSource;
-
-- (void)finishedEditingRecipe:(BBRecipe *)recipe;
 
 @end

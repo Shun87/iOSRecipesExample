@@ -16,5 +16,6 @@
 - (void)deleteRecipeAtIndex:(NSInteger)index;
 - (BBRecipe *)createNewRecipe;
 - (NSUInteger)indexOfRecipe:(BBRecipe *)recipe;
+- (void)recipesChanged;
 
 @end

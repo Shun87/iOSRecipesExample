@@ -9,6 +9,7 @@
 #import "BBRecipeEditorViewController.h"
 #import "BBRecipe.h"
 #import "BBRecipesListViewController.h"
+#import "BBDirectionsEditorViewController.h"
 
 @interface BBRecipeEditorViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate>
 
@@ -68,7 +69,7 @@
 - (IBAction)done:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.recipeListVC finishedEditingRecipe:self.recipe];
+    [self.delegate finishedEditingRecipe:self.recipe];
 }
 
 - (IBAction)changePreparationTime:(UIStepper *)sender
@@ -76,6 +77,7 @@
     NSInteger value = (NSInteger)[sender value];
     self.recipe.preparationTime = @(value);
     self.prepTimeLabel.text = [self.formatter stringFromNumber:self.recipe.preparationTime];
+    [self.delegate recipeChanged:self.recipe];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -95,6 +97,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     self.recipe.title = textField.text;
+    [self.delegate recipeChanged:self.recipe];
 }
 
 #pragma mark - Storyboard
@@ -105,7 +108,10 @@
         [[segue destinationViewController] setDelegate:self];
     }
     if ([@"editDirections" isEqualToString:segue.identifier]) {
-        [[segue destinationViewController] setRecipe:self.recipe];
+        BBDirectionsEditorViewController *directionsVC = segue.destinationViewController;
+        directionsVC.recipe = self.recipe;
+        directionsVC.delegate = self.delegate;
+        
     }
 }
 
@@ -116,6 +122,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     self.recipe.image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate recipeChanged:self.recipe];
 }
 
 @end

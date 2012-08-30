@@ -21,20 +21,19 @@
 		5BC5AEF015EE8B9C0021854F /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AED715EE87F20021854F /* BBAppDelegate.m */; };
 		5BC5AEF115EE8B9C0021854F /* BBRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AED915EE87F20021854F /* BBRecipe.m */; };
 		5BC5AEF215EE8B9C0021854F /* BBRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */; };
-		5BC5AEF315EE8B9C0021854F /* BBRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */; };
 		5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEE015EE87F20021854F /* BBViewController.m */; };
 		5BC5AEFC15EE8CB50021854F /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFB15EE8CB50021854F /* iphoneicon.png */; };
 		5BC5AEFE15EE8CB80021854F /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B8A8C9215EF8A650004009F /* BBRecipesDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesDocument.h; sourceTree = SOURCE_ROOT; };
-		5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesDocument.m; sourceTree = SOURCE_ROOT; };
+		5B8A8C9215EF8A650004009F /* BBRecipesDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRecipesDocument.h; path = ../../../Martin/Desktop/Recipes/Recipes/BBRecipesDocument.h; sourceTree = SOURCE_ROOT; };
+		5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRecipesDocument.m; path = ../../../Martin/Desktop/Recipes/Recipes/BBRecipesDocument.m; sourceTree = SOURCE_ROOT; };
 		5BBA470315EE926C00A22D84 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = SOURCE_ROOT; };
-		5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorViewController.h; sourceTree = SOURCE_ROOT; };
-		5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipeEditorViewController.m; sourceTree = SOURCE_ROOT; };
-		5BBA470815EE9BCB00A22D84 /* BBDirectionsEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDirectionsEditorViewController.h; sourceTree = SOURCE_ROOT; };
-		5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDirectionsEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRecipeEditorViewController.h; path = ../../../Martin/Desktop/Recipes/Recipes/BBRecipeEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRecipeEditorViewController.m; path = ../../../Martin/Desktop/Recipes/Recipes/BBRecipeEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		5BBA470815EE9BCB00A22D84 /* BBDirectionsEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBDirectionsEditorViewController.h; path = ../../../Martin/Desktop/Recipes/Recipes/BBDirectionsEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBDirectionsEditorViewController.m; path = ../../../Martin/Desktop/Recipes/Recipes/BBDirectionsEditorViewController.m; sourceTree = SOURCE_ROOT; };
 		5BBA470B15EEA0C100A22D84 /* TapToChoose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapToChoose.png; sourceTree = SOURCE_ROOT; };
 		5BC5AEA115EE83AB0021854F /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC5AEA515EE83AB0021854F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -47,8 +46,6 @@
 		5BC5AEDA15EE87F20021854F /* BBRecipesListDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesListDataSource.h; path = Recipes/BBRecipesListDataSource.h; sourceTree = SOURCE_ROOT; };
 		5BC5AEDB15EE87F20021854F /* BBRecipesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesListViewController.h; path = Recipes/BBRecipesListViewController.h; sourceTree = SOURCE_ROOT; };
 		5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBRecipesListViewController.m; path = Recipes/BBRecipesListViewController.m; sourceTree = SOURCE_ROOT; };
-		5BC5AEDD15EE87F20021854F /* BBRecipesSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBRecipesSource.h; path = Recipes/BBRecipesSource.h; sourceTree = SOURCE_ROOT; };
-		5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBRecipesSource.m; path = Recipes/BBRecipesSource.m; sourceTree = SOURCE_ROOT; };
 		5BC5AEDF15EE87F20021854F /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BBViewController.h; path = Recipes/BBViewController.h; sourceTree = SOURCE_ROOT; };
 		5BC5AEE015EE87F20021854F /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BBViewController.m; path = Recipes/BBViewController.m; sourceTree = SOURCE_ROOT; };
 		5BC5AEE215EE88300021854F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Recipes/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
@@ -58,6 +55,7 @@
 		5BC5AEEF15EE89B40021854F /* Recipes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Recipes-Prefix.pch"; path = "Recipes/Recipes-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		5BC5AEFB15EE8CB50021854F /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
 		5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
+		5BF2525215EFD5B100E3FE05 /* BBRecipeEditorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +112,7 @@
 				5BC5AEDA15EE87F20021854F /* BBRecipesListDataSource.h */,
 				5BC5AEDB15EE87F20021854F /* BBRecipesListViewController.h */,
 				5BC5AEDC15EE87F20021854F /* BBRecipesListViewController.m */,
-				5BC5AEDD15EE87F20021854F /* BBRecipesSource.h */,
-				5BC5AEDE15EE87F20021854F /* BBRecipesSource.m */,
+				5BF2525215EFD5B100E3FE05 /* BBRecipeEditorDelegate.h */,
 				5BC5AEDF15EE87F20021854F /* BBViewController.h */,
 				5BC5AEE015EE87F20021854F /* BBViewController.m */,
 				5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */,
@@ -127,8 +124,8 @@
 				5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */,
 			);
 			name = Recipes;
-			path = StoryboardRecipes;
-			sourceTree = "<group>";
+			path = ../../../Martin/Desktop/Recipes/Recipes;
+			sourceTree = SOURCE_ROOT;
 		};
 		5BC5AEAC15EE83AB0021854F /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -222,7 +219,6 @@
 				5BC5AEF015EE8B9C0021854F /* BBAppDelegate.m in Sources */,
 				5BC5AEF115EE8B9C0021854F /* BBRecipe.m in Sources */,
 				5BC5AEF215EE8B9C0021854F /* BBRecipesListViewController.m in Sources */,
-				5BC5AEF315EE8B9C0021854F /* BBRecipesSource.m in Sources */,
 				5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */,
 				5BC5AEEE15EE89130021854F /* main.m in Sources */,
 				5BBA470715EE93E900A22D84 /* BBRecipeEditorViewController.m in Sources */,

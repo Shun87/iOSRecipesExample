@@ -124,7 +124,7 @@
         BBRecipe *recipe = [self.dataSource createNewRecipe];
         UIViewController *topVC = [[segue destinationViewController] topViewController];
         BBRecipeEditorViewController *editor = (BBRecipeEditorViewController *)topVC;
-        editor.recipeListVC = self;
+        editor.delegate = self;
         editor.recipe = recipe;
     }
     if ([@"presentRecipeDetail" isEqualToString:segue.identifier]) {
@@ -137,11 +137,12 @@
         BBRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
         UINavigationController *nav = [segue destinationViewController];
         BBRecipeEditorViewController *editor = (BBRecipeEditorViewController *)nav.topViewController;
-        editor.recipeListVC = self;
+        editor.delegate = self;
         editor.recipe = recipe;
     }
 }
 
+#pragma mark - BBRecipeEditorDelegate methods
 
 - (void)finishedEditingRecipe:(BBRecipe *)recipe
 {
@@ -151,6 +152,18 @@
     if (nil == cell) {
         [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
     } else {
+        [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
+        [self.dataSource recipesChanged];
+    }
+}
+
+- (void)recipeChanged:(BBRecipe *)recipe
+{
+    [self.dataSource recipesChanged];
+    NSUInteger row = [self.dataSource indexOfRecipe:recipe];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+    if (nil != cell) {
         [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
     }
 }

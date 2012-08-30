@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBRecipeEditorDelegate.h"
 
 @class BBRecipe;
 
 @interface BBDirectionsEditorViewController : UIViewController
 
 @property (strong, nonatomic) BBRecipe *recipe;
+@property (weak, nonatomic) id<BBRecipeEditorDelegate> delegate;
 
 @end

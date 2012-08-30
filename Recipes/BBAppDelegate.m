@@ -8,7 +8,6 @@
 
 #import "BBAppDelegate.h"
 #import "BBRecipesListViewController.h"
-#import "BBRecipesSource.h"
 #import "BBRecipesDocument.h"
 
 @implementation BBAppDelegate
