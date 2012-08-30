@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BBRecipe : NSObject
+@interface BBRecipe : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *directions;

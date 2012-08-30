@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8A8C9415EF8A650004009F /* BBRecipesDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */; };
 		5BBA470415EE926C00A22D84 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BBA470315EE926C00A22D84 /* cookies.png */; };
 		5BBA470715EE93E900A22D84 /* BBRecipeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */; };
 		5BBA470A15EE9BCB00A22D84 /* BBDirectionsEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B8A8C9215EF8A650004009F /* BBRecipesDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipesDocument.h; sourceTree = SOURCE_ROOT; };
+		5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipesDocument.m; sourceTree = SOURCE_ROOT; };
 		5BBA470315EE926C00A22D84 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = SOURCE_ROOT; };
 		5BBA470515EE93E900A22D84 /* BBRecipeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorViewController.h; sourceTree = SOURCE_ROOT; };
 		5BBA470615EE93E900A22D84 /* BBRecipeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRecipeEditorViewController.m; sourceTree = SOURCE_ROOT; };
@@ -120,6 +123,8 @@
 				5BC5AEAC15EE83AB0021854F /* Supporting Files */,
 				5BBA470815EE9BCB00A22D84 /* BBDirectionsEditorViewController.h */,
 				5BBA470915EE9BCB00A22D84 /* BBDirectionsEditorViewController.m */,
+				5B8A8C9215EF8A650004009F /* BBRecipesDocument.h */,
+				5B8A8C9315EF8A650004009F /* BBRecipesDocument.m */,
 			);
 			name = Recipes;
 			path = StoryboardRecipes;
@@ -222,6 +227,7 @@
 				5BC5AEEE15EE89130021854F /* main.m in Sources */,
 				5BBA470715EE93E900A22D84 /* BBRecipeEditorViewController.m in Sources */,
 				5BBA470A15EE9BCB00A22D84 /* BBDirectionsEditorViewController.m in Sources */,
+				5B8A8C9415EF8A650004009F /* BBRecipesDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

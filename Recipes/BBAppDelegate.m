@@ -9,6 +9,7 @@
 #import "BBAppDelegate.h"
 #import "BBRecipesListViewController.h"
 #import "BBRecipesSource.h"
+#import "BBRecipesDocument.h"
 
 @implementation BBAppDelegate
 
@@ -16,7 +17,28 @@
 {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     BBRecipesListViewController *controller = (BBRecipesListViewController *)navigationController.topViewController;
-    controller.dataSource = [[BBRecipesSource alloc] init];
+    
+    NSURL *docDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *docURL = [docDir URLByAppendingPathComponent:@"Recipes.recipes"];
+    BBRecipesDocument *doc = [[BBRecipesDocument alloc] initWithFileURL:docURL];
+    
+    BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:[docURL path]];
+ 
+    if (!exists) {
+        [doc createNewDocumentFile];
+    }
+    
+    
+    [doc openWithCompletionHandler:^(BOOL success) {
+        if (success) {
+            [controller.tableView reloadData];
+        } else {
+            NSLog(@"Failed to open document");        
+        }
+    }];
+    
+    controller.dataSource = doc;
+    
     return YES;
 }
 							
