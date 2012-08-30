@@ -23,7 +23,8 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     BBRecipesListViewController *controller = (BBRecipesListViewController *)navigationController.topViewController;
     
-    NSURL *docDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *docDir = [[[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil] URLByAppendingPathComponent:@"Documents"];
+    
     NSURL *docURL = [docDir URLByAppendingPathComponent:@"Recipes.recipes"];
     BBRecipesDocument *doc = [[BBRecipesDocument alloc] initWithFileURL:docURL];
     

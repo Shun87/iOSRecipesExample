@@ -58,6 +58,7 @@
 		5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
 		5BF2525215EFD5B100E3FE05 /* BBRecipeEditorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorDelegate.h; sourceTree = "<group>"; };
 		5BF2525315EFE41900E3FE05 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5BF2525815EFFB9200E3FE05 /* Recipes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Recipes.entitlements; path = Recipes/Recipes.entitlements; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		5BC5AEAB15EE83AB0021854F /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2525815EFFB9200E3FE05 /* Recipes.entitlements */,
 				5BC5AEE115EE88300021854F /* MainStoryboard.storyboard */,
 				5BC5AED615EE87F20021854F /* BBAppDelegate.h */,
 				5BC5AED715EE87F20021854F /* BBAppDelegate.m */,
@@ -303,10 +305,13 @@
 		5BC5AEC015EE83AB0021854F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Recipes/Recipes.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Martin VOLERICH (5Q4SS5RC9A)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
 				PRODUCT_NAME = Recipes;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F7D9C3AB-18F5-4C47-88F9-DC7B2CE4745D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -314,6 +319,7 @@
 		5BC5AEC115EE83AB0021854F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Recipes/Recipes.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
