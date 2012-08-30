@@ -24,6 +24,7 @@
 		5BC5AEF415EE8B9C0021854F /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEE015EE87F20021854F /* BBViewController.m */; };
 		5BC5AEFC15EE8CB50021854F /* iphoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFB15EE8CB50021854F /* iphoneicon.png */; };
 		5BC5AEFE15EE8CB80021854F /* iphoneiconretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */; };
+		5BF2525415EFE41900E3FE05 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF2525315EFE41900E3FE05 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		5BC5AEFB15EE8CB50021854F /* iphoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneicon.png; sourceTree = "<group>"; };
 		5BC5AEFD15EE8CB80021854F /* iphoneiconretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneiconretina.png; sourceTree = "<group>"; };
 		5BF2525215EFD5B100E3FE05 /* BBRecipeEditorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRecipeEditorDelegate.h; sourceTree = "<group>"; };
+		5BF2525315EFE41900E3FE05 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF2525415EFE41900E3FE05 /* MessageUI.framework in Frameworks */,
 				5BC5AEA615EE83AB0021854F /* UIKit.framework in Frameworks */,
 				5BC5AEA815EE83AB0021854F /* Foundation.framework in Frameworks */,
 				5BC5AEAA15EE83AB0021854F /* CoreGraphics.framework in Frameworks */,
@@ -94,6 +97,7 @@
 		5BC5AEA415EE83AB0021854F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2525315EFE41900E3FE05 /* MessageUI.framework */,
 				5BC5AEA515EE83AB0021854F /* UIKit.framework */,
 				5BC5AEA715EE83AB0021854F /* Foundation.framework */,
 				5BC5AEA915EE83AB0021854F /* CoreGraphics.framework */,

@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSMutableArray *recipes;
 
 - (void)createNewDocumentFile;
+- (void)addRecipesFromDocument:(BBRecipesDocument *)newDoc;
 
 @end

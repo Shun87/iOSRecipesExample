@@ -8,6 +8,8 @@
 
 #import "BBRecipesDocument.h"
 
+NSString * const BBRecipesDidChangeNotification = @"BBRecipesDidChangeNotification";
+
 @implementation BBRecipesDocument
 
 
@@ -45,6 +47,19 @@
 - (void)recipesChanged
 {
     [self updateChangeCount:UIDocumentChangeDone];
+}
+
+- (NSData *)dataForRecipes:(NSError *__autoreleasing *)error
+{
+    __block NSData *data = nil;
+    NSFileCoordinator *coordinator = [[NSFileCoordinator alloc] initWithFilePresenter:nil];
+    [coordinator coordinateReadingItemAtURL:self.fileURL
+                                    options:NSFileCoordinatorReadingWithoutChanges
+                                      error:error
+                                 byAccessor:^(NSURL *newURL) {
+                                     data = [NSData dataWithContentsOfURL:newURL];
+                                 }];
+    return data;
 }
 
 #pragma mark - UIDocument overrides
@@ -92,6 +107,13 @@
     [self saveToURL:self.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
         NSLog(@"New file created.");
     }];
+}
+
+- (void)addRecipesFromDocument:(BBRecipesDocument *)newDoc
+{
+    [self.recipes addObjectsFromArray:newDoc.recipes];
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBRecipesDidChangeNotification object:self];
+    [self updateChangeCount:UIDocumentChangeDone];
 }
 
 @end

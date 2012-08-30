@@ -10,6 +10,12 @@
 #import "BBRecipesListViewController.h"
 #import "BBRecipesDocument.h"
 
+@interface BBAppDelegate()
+
+@property (strong, nonatomic) BBRecipesDocument *document;
+
+@end
+
 @implementation BBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -37,9 +43,24 @@
     }];
     
     controller.dataSource = doc;
+    self.document = doc;
     
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BBRecipesDocument *newDoc = [[BBRecipesDocument alloc] initWithFileURL:url];
+    [newDoc openWithCompletionHandler:^(BOOL success) {
+        if (success) {
+            [self.document addRecipesFromDocument:newDoc];
+        } else {
+            NSLog(@"Failed to open new document -%@", url);
+        }
+    }];
+    return YES;
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

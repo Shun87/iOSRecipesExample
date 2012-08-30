@@ -9,8 +9,11 @@
 #import "BBRecipesListViewController.h"
 #import "BBViewController.h"
 #import "BBRecipeEditorViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface BBRecipesListViewController ()
+@interface BBRecipesListViewController () <MFMailComposeViewControllerDelegate, UINavigationControllerDelegate>
+
+- (IBAction)sendEmail:(id)sender;
 
 @end
 
@@ -34,6 +37,28 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(recipesChanged:)
+                                                 name:BBRecipesDidChangeNotification
+                                               object:self.dataSource];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:BBRecipesDidChangeNotification
+                                                  object:self.dataSource];
+}
+
+- (void)recipesChanged:(id)sender
+{
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -168,4 +193,27 @@
     }
 }
 
+- (IBAction)sendEmail:(id)sender
+{
+    MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
+    mailVC.delegate = self;
+    [mailVC setSubject:@"Great Recipes"];
+    NSError *error = nil;
+    [mailVC addAttachmentData:[self.dataSource dataForRecipes:&error]
+                     mimeType:@"application/octet-stream"
+                     fileName:@"Recipes.recipes"];
+    if (nil == error) {
+        mailVC.mailComposeDelegate = self;
+        [self presentViewController:mailVC animated:YES completion:nil];
+    } else {
+        NSLog(@"error in coordinating read %@ - %@", error, error.userInfo);
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
 @end

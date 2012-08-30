@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "BBRecipe.h"
 
+extern NSString * const BBRecipesDidChangeNotification;
+
 @protocol BBRecipesListDataSource <NSObject>
 
 - (NSInteger)recipeCount;
@@ -17,5 +19,6 @@
 - (BBRecipe *)createNewRecipe;
 - (NSUInteger)indexOfRecipe:(BBRecipe *)recipe;
 - (void)recipesChanged;
+- (NSData *)dataForRecipes:(NSError **)error;
 
 @end

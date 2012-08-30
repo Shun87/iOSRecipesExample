@@ -48,6 +48,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recipes" id="sQF-yM-jOG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Eks-zH-NaY">
+                            <connections>
+                                <action selector="sendEmail:" destination="2" id="KgY-3i-biT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mAc-gO-LFw">
                             <connections>
                                 <segue destination="rcA-hN-ddP" kind="modal" identifier="addNewRecipe" id="996-JT-ZIW"/>
@@ -319,41 +324,6 @@
         <image name="TapToChoose.png" width="280" height="280"/>
         <image name="cookies.png" width="280" height="280"/>
     </resources>
-    <classes>
-        <class className="BBDirectionsEditorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBDirectionsEditorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BBRecipeEditorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBRecipeEditorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changePreparationTime:" candidateClass="UIStepper"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="directionsText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="prepTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="prepTimeStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="recipeImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BBRecipesListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBRecipesListViewController.h"/>
-        </class>
-        <class className="BBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="directionsView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="prepTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recipeTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
