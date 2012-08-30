@@ -310,6 +310,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Recipes;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F7D9C3AB-18F5-4C47-88F9-DC7B2CE4745D";
 				WRAPPER_EXTENSION = app;
@@ -323,6 +324,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Recipes/Recipes-Prefix.pch";
 				INFOPLIST_FILE = "Recipes/Recipes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Recipes;
 				WRAPPER_EXTENSION = app;
 			};

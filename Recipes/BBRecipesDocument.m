@@ -86,6 +86,7 @@ NSString * const BBRecipesDidChangeNotification = @"BBRecipesDidChangeNotificati
     if ([contents isKindOfClass:[NSData class]] && [contents length] > 0) {
         NSData *data = (NSData *)contents;
         self.recipes = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        [[NSNotificationCenter defaultCenter] postNotificationName:BBRecipesDidChangeNotification object:self];
         success = YES;
     }
     return success;

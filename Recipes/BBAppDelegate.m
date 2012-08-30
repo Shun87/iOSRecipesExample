@@ -43,10 +43,25 @@
         }
     }];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(docChangedState:)
+                                                 name:UIDocumentStateChangedNotification
+                                               object:doc];
+    
     controller.dataSource = doc;
     self.document = doc;
     
     return YES;
+}
+
+- (void)docChangedState:(NSNotification *)notification
+{
+    NSURL *url = [[notification object] fileURL];
+    NSArray *versions = [NSFileVersion unresolvedConflictVersionsOfItemAtURL:url];
+    for (NSFileVersion *fileVersion in versions) {
+        NSError *error = nil;
+        [fileVersion removeAndReturnError:&error];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
